@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="assets/images/logo/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title id="company-title"></title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  </head>
+
+    <body>
+        <!-- Page loader start -->
+        <div class="loader">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="34px" height="40px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+            <rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
+                <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.8s" repeatCount="indefinite" />
+                <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0s" dur="0.8s" repeatCount="indefinite" />
+                <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0s" dur="0.8s" repeatCount="indefinite" />
+            </rect>
+            <rect x="8" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+                <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.15s" dur="0.8s" repeatCount="indefinite" />
+                <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.15s" dur="0.8s" repeatCount="indefinite" />
+                <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.15s" dur="0.8s" repeatCount="indefinite" />
+            </rect>
+            <rect x="16" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+                <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.3s" dur="0.8s" repeatCount="indefinite" />
+                <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.3s" dur="0.8s" repeatCount="indefinite" />
+                <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.3s" dur="0.8s" repeatCount="indefinite" />
+            </rect>
+            </svg>
+        </div>
+        <!-- Page loader end -->
+        
+        <!-- Header Start -->
+        <header id="#top">
+            <nav class="main-navigation navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img id="header-image" alt="">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="our-services.html">Our Service</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="courses.html">Courses</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About Us</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- Header End -->
+        
+        <!-- Main Banner Start (Education Video) -->
+        <div class="main-banner change-name" id="video-container">
+            <video autoplay="" loop="" muted="">
+                <source src="assets/AH EDU GLOBAL LTD-Hom page vid.mp4" type="video/mp4">
+            </video>
+
+            <div class="fade-bottom"></div>
+        </div>
+        <!-- Main Banner End (Education Video) -->
+
+        <div class="main-banner change-name" id="video-container" style="margin-top: 5rem;">
+            <video autoplay="" loop="" muted="">
+                <source src="assets/Open-doors-to-world-class-UK-universities.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        <!-- (TODO: we will work on later) -->
+        <!-- Search Form Start-->
+        <!-- <div class="search-form">
+            <div class="container">
+                <form id="search-form" name="gs" method="submit" role="search" action="#">
+                    <div class="row g-4">
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <fieldset>
+                                <label for="searchTitle" class="form-label">What do you want to study?</label>
+                                <input type="text" name="searchTitle" class="searchText" placeholder="What do you want to study?..." autocomplete="on" required>
+                            </fieldset>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <fieldset>
+                                <label for="chooseprice" class="form-label">Subject</label>
+                                <select name="Price" class="form-select" aria-label="Default select example" id="chooseCategory" onChange="this.form.click()">
+                                    <option selected>Select Subject</option>
+                                    <option value="1">Lorem spam</option>
+                                    <option value="2">Lorem spam 1</option>
+                                    <option value="3">Lorem spam 2</option>
+                                    <option value="4">Lorem spam 3</option>
+                                </select>
+                            </fieldset>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <fieldset>
+                                <label for="chooseplan" class="form-label">Level</label>
+                                <select name="Plan" class="form-select" aria-label="Default select example" id="chooseCategory" onChange="this.form.click()">
+                                    <option selected>select Level</option>
+                                    <option value="Standard">Standard</option>
+                                    <option value="Professional">Professional</option>
+                                    <option value="Golden">Golden</option>
+                                    <option value="Premium">Premium</option>
+                                </select>
+                            </fieldset>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">                        
+                            <fieldset class="d-flex align-items-end h-100">
+                                <button class="main-button">Search Now</button>
+                            </fieldset>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div> -->
+        <!-- Search Form End -->
+
+        <!-- Who We Serve Section Start -->
+        <section class="whoWeServe-section" id="whoWeServe">
+            <div class="tag2 outter">
+                <div class="photo trc anim">
+                    <img 
+                    src="/assets/images/Who-we-serve-AH-EDU-Global-LTD-1.jpg" 
+                    alt="A professional consultation taking place in a bright office where a woman and a man shake hands across a desk, while two colleagues 
+                        observe with laptops and notebooks open. The handshake symbolizes trust and partnership, reflecting the personalized guidance provided by UK 
+                        University Admission Consultants to students seeking university placements in the UK." 
+                    class="photo-img" />
+                </div>
+            </div>
+
+            <div class="whoWeServe-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-heading mt-5">
+                                <h2 style="font-size: 3vw;">Who We Serve</h2>
+                                <div class="">
+                                    <h4 class="text-center whoWeServe-header">Your Trusted UK University Admission Consultants-
+                                            <br>Guiding Every Step of Your Academic Journey</h4>
+                                </div>
+
+                                <div class="mt-3">
+                                    <div style="text-align: justify;">
+                                        <span class="description">
+                                            At <span class="fw-bold">AH EDU Global LTD</span>, we are a team of experienced UK university admission consultants dedicated to helping students achieve their higher education goals with confidence and clarity. Whether you are applying from within the UK, across Europe, or anywhere around the world, our
+                                            personalized admission support ensures you a very smooth, successful, and stress-free journey to your dream university.
+                                            With deep expertise in undergraduate and postgraduate admissions, we guide you through every stage — from course selection and application
+                                            preparation to document review, interview assistance support and final enrolment.<br><br>Our mission is simple: to connect you with top UK
+                                            universities that match their academic aspirations and career ambitions.
+                                            We pride ourselves on offering transparent, ethical, and result-driven consulting that empowers students to make informed decisions and stand
+                                            out in competitive admissions.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+
+                    <div style="text-align: center;" class="mt-2 mb-3">
+                        <h4>Our Expertise Extends to Every Student Group</h4>
+                    </div>
+                    
+                    <div class="row g-4" id="who-we-serve-container">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Who We Serve Section End -->
+        
+        <!-- Our Services Section Start -->
+        <section class="our-services" id="services">
+            <div class="tag3 outter">
+                <div class="photo trc anim">
+                    <img 
+                    src="/assets/images/Who-we-serve-AH-EDU-Global-LTD.jpg" 
+                    alt="A confident professional woman with short blonde hair and glasses smiling with folded arms in a bright modern office, while a small team of colleagues 
+                        converse in the background. The scene reflects the approachable and expert nature of UK University Admission Consultants offering comprehensive guidance to 
+                        students pursuing higher education in the UK." 
+                    class="photo-img" />
+                </div>
+            </div>
+            <div class="our-services-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-heading">
+                                <h2 style="font-size: 3vw;">Comprehensive Services</h2>
+                                <div>
+                                    <h4 class="text-center Comprehensive-header">Comprehensive UK University Admission Support Services
+                                            <br>From Your Trusted UK University Admission Consultants</h4>
+                                </div>
+
+                                <div class="mt-3">
+                                    <div style="text-align: justify;">
+                                        <span class="description">
+                                            At <span class="fw-bold">AH EDU Global LTD</span>, our UK university admission consultants provide complete support from start to finish — eligibility assessment, course
+                                            matching, application help, interview preparation, and post-enrolment guidance. Whether you’re from the UK, EU, or abroad, our expert team
+                                            ensures your admission process is seamless, stress-free, and successful.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+                    <div class="row g-4" id="our-services-container">
+                        <!-- Loading Spinner Start -->
+                        <div id="loader" style="display: none; text-align: center; padding: 30px">
+                            <div class="progress-circle">
+                                <svg viewBox="0 0 36 36" class="circular-chart">
+                                <path
+                                    class="circle-bg"
+                                    d="M18 2.0845
+                                    a 15.9155 15.9155 0 0 1 0 31.831
+                                    a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <path
+                                    class="circle"
+                                    d="M18 2.0845
+                                    a 15.9155 15.9155 0 0 1 0 31.831
+                                    a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <text x="18" y="20.35" class="percentage-text">0%</text>
+                                </svg>
+                            </div>
+                            <p style="margin-top: 15px; font-size: 18px; font-weight: 500; color: #333;">Services are loading...</p>
+                        </div>
+                        <!-- Loading Spinner End -->
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-footer text-center mt-4">
+                                <p>Need a personalised consultation to discuss your options?</p>
+                                <button onclick="window.open('contact.html', '_blank')" class="main-button">Book a Free Consultation</button>
+                            </div>
+                        </div> 
+                    </div> 
+                </div>
+            </div>
+        </section>
+        <!-- Our Services Section End -->
+        
+        <!-- Why Choose Us Section Start -->
+        <section class="whyChooseUs-section bg-light" id="whyChooseUs">
+            <div class="tag4 outter">
+                <div class="photo trc anim">
+                    <img 
+                    src="/assets/images/AH-EDU-GLOBAL-LTD-WHY-CHOOSE-Us.jpg" 
+                    alt="A smiling consultant holding a sign that reads ‘Why Choose Us?’ with a professional team discussing in the background, symbolizing expert guidance 
+                        and trusted support for UK University Admission 2026 applicants." 
+                    class="photo-img" />
+                </div>
+            </div>
+
+            <div class="whyChooseUs-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-heading">
+                                <h2 style="font-size: 3vw;">Why Choose Us?</h2>
+                                <div style="text-align: justify;" class="description">
+                                    <span id="choose-us-header"></span>
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+                    <div class="row g-4" id="choose-us-detail-container">
+                        <!-- Loading Spinner Start -->
+                        <div id="choose-us-loader" style="display: none; text-align: center; padding: 30px">
+                            <div class="progress-circle">
+                                <svg viewBox="0 0 36 36" class="circular-chart">
+                                <path
+                                    class="circle-bg"
+                                    d="M18 2.0845
+                                    a 15.9155 15.9155 0 0 1 0 31.831
+                                    a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <path
+                                    class="circle"
+                                    d="M18 2.0845
+                                    a 15.9155 15.9155 0 0 1 0 31.831
+                                    a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <text x="18" y="20.35" class="percentage-text">0%</text>
+                                </svg>
+                            </div>
+                            <p style="margin-top: 15px; font-size: 18px; font-weight: 500; color: #333;">Loading... Please wait for few moments</p>
+                        </div>
+                        <!-- Loading Spinner End -->
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-footer text-center mt-4 mb-4">
+                                <button onclick="window.open('contact.html', '_blank')" class="main-button">Book a Free Consultation</button>
+                            </div>
+                        </div> 
+                    </div> 
+                </div>
+            </div>
+        </section>
+        <!-- Why Choose Us Section End -->
+        
+        <!-- Testimonials Section Start -->
+        <section class="testimonials-wrap">
+            <div class="container">
+                <div class="heading-section">
+                    <span class="sub-heading">Testimonials</span>
+                    <h2>Happy Clients &amp; Feedbacks</h2>
+                </div>
+                <div class="carousel-testimonial owl-carousel" id="feedback-container">
+
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials Section End -->
+
+        <!-- Contact Us Section Start -->
+        <section class="contact-us p-0" id="contact" style="background-color: #d8d8d8;">
+            <div class="tag5 outter">
+                <div class="photo trc anim">
+                    <img 
+                    src="/assets/images/AH-EDU-GLOBAL-LTD-Contact-us.png" 
+                    alt="Contact Us" 
+                    class="photo-img" />
+                </div>
+            </div>
+            <!-- <div class="block2 outter">
+                <div class="photo"></div>
+            </div> -->
+            <div class="contact-us-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-heading">
+                                <!-- <h2 style="font-size: 3vw;">contact-us</h2> -->
+                            </div>
+                        </div> 
+                    </div> 
+
+                    <div class="row">
+                        <div class="col-lg-6 left-form">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="contact-section-heading">
+                                        <h2>Send Us a Message!</h2>
+                                    </div>
+                                </div>
+
+                            <!-- Placeholder for success/error messages -->
+                            <div id="formResponse" style="margin-bottom: 15px"></div>
+
+                            <!-- Contact Form -->
+                            <form id="contactForm" action="#" method="post">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                    <input
+                                        type="text"
+                                        name="firstName"
+                                        id="first-name"
+                                        placeholder="First Name*"
+                                        required
+                                    />
+                                    </div>
+                                    <div class="col-lg-6">
+                                    <input
+                                        type="text"
+                                        name="lastName"
+                                        id="last-name"
+                                        placeholder="Last Name*"
+                                        required
+                                    />
+                                    </div>
+                                    <div class="col-lg-6">
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        id="email"
+                                        pattern="[^ @]*@[^ @]*"
+                                        placeholder="Your Email*"
+                                        required
+                                    />
+                                    </div>
+                                    <div class="col-lg-6">
+                                    <input
+                                        type="text"
+                                        name="phone"
+                                        id="phone"
+                                        placeholder="Phone*"
+                                        required
+                                    />
+                                    </div>
+                                    <div class="col-lg-12">
+                                    <textarea
+                                        name="message"
+                                        id="message"
+                                        placeholder="Message"
+                                        required
+                                    ></textarea>
+                                    </div>
+                                    <div class="col-lg-12">
+                                    <button type="submit" id="form-submit" class="main-button">
+                                        Send Message
+                                    </button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-6 right-map">
+                            <div class="img" id="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="map" class="outter">
+            <div class="wrap">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.182370726!2d-0.10159865000000001!3d51.52864165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2sbd!4v1762420813923!5m2!1sen!2sbd" width="100%" height="685px" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <!-- Contact Us Section End -->
+        
+        <!-- Footer Start -->
+        <footer class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="about-widget">
+                            <img id="footer-image" alt="">
+                            <p id="footer-message"></p>
+                            <ul class="info d-flex justify-content-center justify-content-lg-start gap-4">
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 offset-lg-2">
+                        <div class="location-widget">
+                            <h4>Our Location</h4>
+                            <p id="footer-address"></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="customer-care">
+                            <h4>Customer Care</h4>
+                            <ul class="info">
+                                <li><a href="" id="footer-contact"></a></li>
+                                <li><a href="" id="footer-email"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="follow-us">
+                            <h4>Follow Us</h4>
+                            <ul class="social-links">
+                                <li>
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                                        </svg>
+                                        Facebook
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                                        </svg>
+                                        Twitter
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                                        </svg>
+                                        Linkedin
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="sub-footer">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <p>Copyright © <span id="copyright-year"></span> <span id="footer-company-title"></span> All rights reserved.</p>
+                                </div>
+                                <div class="col-lg-6">
+                                    <a href="#top" class="scroll-to-top">
+                                        Go to Top
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-up" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5zm-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer End -->
+        
+        <!-- Scripts -->
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- <script src="assets/js/isotope.min.js"></script> -->
+        <script src="assets/js/owl-carousel.js"></script>
+
+        <!-- <script src="assets/js/tabs.js"></script> -->
+        <script src="assets/js/popup.js"></script>
+        <script src="assets/js/custom.js"></script>
+
+        <!-- API Call -->
+        <script src="js/apiRequest.js"></script>
+        <script>
+            $(document).ready(function(){
+                // Header API Call
+                getCompanyDetail();
+                // Footer API Call
+                getCompanyFooter();
+                getWhoWeServeList();
+                getFeedbackList();
+                // Contact Us API Call
+                sendContactUsData(0);
+                getServiceList();
+                getChooseUsList();
+            })
+        </script>
+    </body>
+</html>
