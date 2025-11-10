@@ -183,26 +183,97 @@ const getServiceList=async()=>{
   try{
       const response=await fetch(`${coolInvoiceApiUrl}/api/Service/GetAllServiceByCompanyId/${companyId}`);
       const serviceList=await response.json();
-      //console.log("Service:",serviceList);
-      var serviceContainer=$("#our-services-container");
-      serviceContainer.empty();
-      serviceList.forEach((service)=>{
-          serviceContainer.append(`
-              <div class="col-12 col-md-6 col-lg-4">
-                  <div class="service-item d-flex flex-column justify-content-between">
-                      <div class="">
-                        <h4>${service.serviceName}</h4>
-                        <img src="${service.imageUrl}" height="200" width="310" alt="${service.serviceName}" class="d-block mx-auto" />
-                        <p class="mt-3" style="text-align:justify">${service.description}</p>
-                      </div>
+      console.log("Service:",serviceList);
+      // var serviceContainer=$("#our-services-container");
+      // serviceContainer.empty();
+      // serviceList.forEach((service)=>{
+      //     serviceContainer.append(`
+      //         <div class="col-12 col-md-6 col-lg-4">
+      //             <div class="service-item d-flex flex-column justify-content-between">
+      //                 <div class="">
+      //                   <h4>${service.serviceName}</h4>
+      //                   <img src="${service.imageUrl}" height="200" width="310" alt="${service.serviceName}" class="d-block mx-auto" />
+      //                   <p class="mt-3" style="text-align:justify">${service.description}</p>
+      //                 </div>
 
-                      <div class="d-flex">
-                          <button onclick="window.open('contact.html', '_blank')" target="_blank" class="main-button w-100">${service.duration}</button> 
-                      </div>
+      //                 <div class="d-flex">
+      //                     <button onclick="window.open('contact.html', '_blank')" target="_blank" class="main-button w-100">${service.duration}</button> 
+      //                 </div>
+      //             </div>
+      //         </div>
+      //     `)
+      // })
+
+      const serviceContainer = $("#our-services-container");
+      serviceContainer.empty();
+
+      // Helper: decide columns-per-row based on Bootstrap breakpoints
+      function getColsPerRow() {
+        const w = window.innerWidth;
+        if (w >= 992) return 3;    // lg and above
+        if (w >= 768) return 2;    // md
+        return 1;                  // sm and xs
+      }
+
+      // Helper: chunk an array into groups of size n
+      function chunkArray(arr, n) {
+        const chunks = [];
+        for (let i = 0; i < arr.length; i += n) {
+          chunks.push(arr.slice(i, i + n));
+        }
+        return chunks;
+      }
+
+      // Render function so we can re-render on resize (keeps last row centered if incomplete)
+      function renderServices(list) {
+        serviceContainer.empty();
+        const perRow = getColsPerRow();
+        const rows = chunkArray(list, perRow);
+
+        rows.forEach((chunk, rowIndex) => {
+          // If this row is incomplete, center its items. Otherwise keep default layout.
+          const incomplete = chunk.length < perRow;
+          const rowClass = incomplete ? 'row g-4 justify-content-center' : 'row g-4';
+          const $row = $(`<div class="${rowClass}"></div>`);
+
+          chunk.forEach(service => {
+            // build column markup
+            const col = `
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="service-item d-flex flex-column justify-content-between">
+                  <div>
+                    <h4>${service.serviceName}</h4>
+                    <img src="${service.imageUrl}" height="200" width="310" alt="${service.serviceName}" class="d-block mx-auto" />
+                    <p class="mt-3" style="text-align:justify">${service.description}</p>
                   </div>
+                  <div class="d-flex">
+                    <button onclick="window.open('contact.html', '_blank')" target="_blank" class="main-button w-100">${service.duration}</button>
+                  </div>
+                </div>
               </div>
-          `)
-      })
+            `;
+            $row.append(col);
+          });
+
+          serviceContainer.append($row);
+        });
+      }
+
+      // initial render + safe error handling if serviceList is not as expected
+      try {
+        if (!Array.isArray(serviceList)) throw new Error('serviceList is not an array');
+        renderServices(serviceList);
+      } catch (err) {
+        console.error('Failed to render services:', err);
+        serviceContainer.append('<div class="col-12">Unable to load services.</div>');
+      }
+
+      // Re-render on window resize with debounce so last row re-centers when viewport changes.
+      let resizeTimer = null;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => renderServices(serviceList), 120);
+      });
   }
   catch(error){
       console.error("Error fetching company details:",error);
