@@ -2278,11 +2278,14 @@ section.contact-us-page .right-info ul li span {
   font-size: 28px;
   font-weight: 600;
   margin-bottom: 24px;
+  color: #fff;
+  text-align: center;
 }
 
 .right-body-info p{
   font-size: 16px;
   color: #222;
+  text-align: center;
 }
 /* Admission Section End */
 
