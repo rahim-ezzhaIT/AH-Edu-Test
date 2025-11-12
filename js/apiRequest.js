@@ -247,7 +247,11 @@ const getServiceList=async()=>{
                     <p class="mt-3" style="text-align:justify">${service.description}</p>
                   </div>
                   <div class="d-flex">
-                    <button onclick="window.open('contact.html', '_blank')" target="_blank" class="main-button w-100">${service.duration}</button>
+                    ${(service.serviceName === "Direct Application Support" || service.serviceName === "Student Finance & Scholarship Guidance") ?
+                      `<button onclick="window.open('admissions-info.html', '_blank')" target="_blank" class="main-button w-100">${service.duration}</button>`
+                      :
+                      `<button onclick="window.open('contact.html', '_blank')" target="_blank" class="main-button w-100">${service.duration}</button>`
+                    }
                   </div>
                 </div>
               </div>

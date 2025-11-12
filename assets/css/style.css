@@ -1028,19 +1028,19 @@ footer .sub-footer a.scroll-to-top:hover {
   color: #f8ac20;
 }
 
-.page-banner {
+/* .page-banner {
   background-color: #333;
-  background-image: url(../images/page-banner-bg.jpg);
+  background-image: url(../images/Contact-Us-\(2\).jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   padding: 100px 0px 90px 0px;
   text-align: center;
-}
+} */
 
 @media (min-width: 768px) {
   .page-banner {
-    padding: 180px 0px;
+    padding: 65px 0px 0px 0px;
   }
 }
 
@@ -2109,3 +2109,255 @@ section.contact-us-page .right-info ul li span {
   }
 
 /* Loading Spinner for API Call. End Here */
+
+/* Admission Section Start */
+.tag8 {
+  padding: 0;
+  margin: 0;
+  font-size: 40px;
+  position: relative;
+  overflow: hidden; /* Prevent overflow artifacts */
+}
+
+.tag8 .photo {
+  width: 100%;
+  height: 400px; /* Increased height */
+  margin: 0; /* Remove any vertical spacing */
+  padding: 0;
+  position: relative;
+}
+
+.tag8 .photo-img {
+  display: block; /* Removes default inline spacing */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+
+/* Text overlay */
+.admission-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+.admission-text h2 {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.admission-header-text h2{
+  font-size: 44px;
+}
+
+.student-support-header{
+  font-size: 74px;
+}
+
+.admission-description{
+  margin-bottom: 40px;
+}
+
+.admission-info-body p{
+  font-size: 16px;
+}
+
+.description-list{
+  padding-left: 20px;
+}
+
+.description-list li{
+  font-size: 16px;
+  margin-bottom: 10px;
+  line-height: 26px;
+  color: #7a7a7a;
+}
+
+.admission-ribbon {
+  --f: 10px; /* control the folded part*/
+  --r: 15px; /* control the ribbon shape */
+  
+  position: absolute;
+  top: 10px;
+  padding-inline: 10px;
+  background: #BD6E14;
+  border-bottom: var(--f) solid #0005;
+  color: #fff;
+  line-height: 1.3em;
+  font-family: sans-serif;
+  font-size: 25px;
+}
+
+.admission-ribbon.left {
+  height: 108%;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: calc(-3.5 * var(--f));
+  border-right: var(--r) solid #0000;
+  clip-path: polygon(100% 0, 0 0, 0 calc(100% - var(--f)), var(--f) 100%, var(--f) calc(100% - var(--f)), 100% calc(100% - var(--f)), calc(100% - var(--r)) calc(40%));
+}
+
+.admission-box {
+  height: 400px;
+  width: 80%;
+  background:#FAB450;
+  position:relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  border-radius: 50px 0 0 0;
+  margin-left: 2rem;
+}
+
+.admission-info-heading h1{
+  font-size: 34px;
+  line-height: 50px;
+}
+
+.admission-tittle{
+  position: relative;
+  left: 100px;
+}
+
+.admission-tittle h1{
+    font-size: 46px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    margin: 0;
+    font-family: serif;
+}
+
+.admission-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.admission-img img{
+  width: 300px;
+}
+
+.flag-banner {
+  width: 100%;
+  height: 820px;
+  box-sizing: content-box;
+  position: relative;
+  background: #FAB450;
+  border-radius: 50px 50px 0 0px;
+}
+
+.flag-banner:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 70px solid #fff;
+  border-left: 205px solid transparent;
+  border-right: 215px solid transparent;
+}
+
+.right-body-info{
+  padding: 50px;
+}
+
+.right-body-info h1{
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.right-body-info p{
+  font-size: 16px;
+  color: #222;
+}
+/* Admission Section End */
+
+/* Contact Us Start */
+.tag6 {
+  padding: 0;
+  margin: 0;
+  font-size: 40px;
+  position: relative;
+  overflow: hidden; /* Prevent overflow artifacts */
+}
+
+.tag6 .photo {
+  width: 100%;
+  height: 400px; /* Increased height */
+  margin: 0; /* Remove any vertical spacing */
+  padding: 0;
+  position: relative;
+}
+
+.tag6 .photo-img {
+  display: block; /* Removes default inline spacing */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+/* Contact Us End */
+
+/* About Us Start */
+.tag7 {
+  padding: 0;
+  margin: 0;
+  font-size: 40px;
+  position: relative;
+  overflow: hidden; /* Prevent overflow artifacts */
+}
+
+.tag7 .photo {
+  width: 100%;
+  height: 400px; /* Increased height */
+  margin: 0; /* Remove any vertical spacing */
+  padding: 0;
+  position: relative;
+}
+
+.tag7 .photo-img {
+  display: block; /* Removes default inline spacing */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+
+/* Text overlay */
+.about-text {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  padding: 20px 40px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.4); /* subtle overlay */
+}
+
+.about-text h1 {
+  font-size: 4rem;
+  margin: 0;
+  font-weight: bold;
+}
+/* About Us End */
+
+
