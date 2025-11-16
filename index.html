@@ -95,6 +95,29 @@
             <video autoplay="" loop="" muted="">
                 <source src="assets/Open-doors-to-world-class-UK-universities.mp4" type="video/mp4">
             </video>
+
+            <div class="carousel-overlay">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <img src="/assets/images/slider-logo/Arden-University.png" alt=""/>
+                    </div>
+                    <div class="item">
+                        <img src="/assets/images/slider-logo/Canterbury-Christ-Church-University.png" alt=""/>
+                    </div>
+                    <div class="item">
+                        <img src="/assets/images/slider-logo/Newcastle-University.png" alt=""/>
+                    </div>
+                    <div class="item">
+                        <img src="/assets/images/slider-logo/Ulster-University.png" alt=""/>
+                    </div>
+                    <div class="item">
+                        <img src="/assets/images/slider-logo/University-of-Bedfordshire.png" alt=""/>
+                    </div>
+                    <div class="item">
+                        <img src="/assets/images/slider-logo/University-of-Wales.png" alt=""/>
+                    </div>
+                </div>
+            </div>
         </div>
         
         <!-- (TODO: we will work on later) -->
@@ -544,15 +567,31 @@
         <script src="js/apiRequest.js"></script>
         <script>
             $(document).ready(function(){
+                // Open university image slider carousel
+                $(".owl-carousel").owlCarousel({
+                    loop: true,
+                    margin: 0,
+                    nav: true,
+                    navText: ["<", ">"],
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+                    smartSpeed: 800,
+                    items: 5
+                });
+
                 // Header API Call
                 getCompanyDetail();
                 // Footer API Call
                 getCompanyFooter();
+                // Who We Serve API Call
                 getWhoWeServeList();
+                // Feedback API Call
                 getFeedbackList();
                 // Contact Us API Call
                 sendContactUsData(0);
+                // Our Services API Call
                 getServiceList();
+                // Why Choose Us API Call
                 getChooseUsList();
             })
         </script>
