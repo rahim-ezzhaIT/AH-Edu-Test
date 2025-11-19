@@ -19,6 +19,16 @@ const Extract_Image_From_WWWRoot = (image, url) => {
   return (extractedImage = url + "/" + rel);
 };
 
+// Remove Extra Spaces in URL
+function slugify(text) {
+  if (typeof text !== "string") throw new TypeError("Expected a string");
+  return text
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9\-]/g, "");
+}
+
 // Company Detail API 
 const getCompanyDetail=async()=>{
     try{
@@ -141,6 +151,7 @@ const getFeedbackList=async()=>{
     }
 }
 
+// Service API
 const getServiceList=async()=>{
   let progress = 0;
   let progressInterval;
@@ -183,6 +194,7 @@ const getServiceList=async()=>{
   try{
       const response=await fetch(`${coolInvoiceApiUrl}/api/Service/GetAllServiceByCompanyId/${companyId}`);
       const serviceList=await response.json();
+      const newServiceList=serviceList.filter(service=>service.categoryName === "Services");
       console.log("Service:",serviceList);
       // var serviceContainer=$("#our-services-container");
       // serviceContainer.empty();
@@ -265,8 +277,8 @@ const getServiceList=async()=>{
 
       // initial render + safe error handling if serviceList is not as expected
       try {
-        if (!Array.isArray(serviceList)) throw new Error('serviceList is not an array');
-        renderServices(serviceList);
+        if (!Array.isArray(newServiceList)) throw new Error('serviceList is not an array');
+        renderServices(newServiceList);
       } catch (err) {
         console.error('Failed to render services:', err);
         serviceContainer.append('<div class="col-12">Unable to load services.</div>');
@@ -287,6 +299,7 @@ const getServiceList=async()=>{
   }
 }
 
+// 'Why Choose Us' API
 const getChooseUsList=async()=>{
   let chooseUsProgress = 0;
   let chooseUsProgressInterval;
@@ -371,16 +384,11 @@ const getChooseUsList=async()=>{
 }
 
 //==============Index Page API Requests End========================
+
 //=============='Our service' Page API Requests Start==============
 
-
-
 //==============Our service' Page API Requests End=================
-//=============='Student' Page API Requests Start==================
 
-
-
-//==============Student' Page API Requests End=====================
 //=============='About Us' Page API Requests Start=================
 const getAboutUsData = async () => {
   try {
@@ -492,10 +500,9 @@ $(document).ready(function () {
   loadStaffTestimonials();
 });
 
+//============== About Us' Page API Requests End ====================
 
-
-//==============About Us' Page API Requests End====================
-//=============='Contact Us' Page API Requests Start===============
+//=============='Contact Us' Page API Requests Start ===============
 const sendContactUsData = async (serviceId) => {
   function generateQuotationNo() {
     const randomDigits = Math.floor(100000 + Math.random() * 900000);
@@ -663,7 +670,236 @@ const sendContactUsData = async (serviceId) => {
   });
 };
 
+//============== Contact Us' Page API Requests End ==================
 
 
+//============== Course Page API Requests Start ==================
+const getCourseCategoryList=async()=>{
+  let progress = 0;
+  let progressInterval;
 
-//==============Contact Us' Page API Requests End==================
+  function updateLoader(percent) {
+    const circle = document.querySelector("#loader .circle");
+    const text = document.querySelector("#loader .percentage-text");
+    const radius = 15.9155;
+    const circumference = 2 * Math.PI * radius;
+    const offset = circumference - (percent / 100) * circumference;
+
+    circle.style.strokeDasharray = `${circumference}`;
+    circle.style.strokeDashoffset = `${offset}`;
+    text.textContent = `${percent}%`;
+  }
+
+  function startSmoothLoader() {
+    progress = 0;
+    updateLoader(progress);
+    progressInterval = setInterval(() => {
+      if (progress < 99) {
+        progress++;
+        updateLoader(progress);
+      }
+    }, 50);
+  }
+
+  function finishLoader() {
+    clearInterval(progressInterval);
+    updateLoader(100);
+    setTimeout(() => {
+      $("#loader").fadeOut(400);
+    }, 1000);
+  }
+
+  $("#loader").show();
+  startSmoothLoader();
+  try{
+        const response=await fetch(`${coolInvoiceApiUrl}/api/Service/GetServiceCategoryListByCompanyId/${companyId}`);
+        const categoryList=await response.json();
+        const newCategoryList=categoryList.filter(category=>category.id !==23);
+        //console.log("Category Data:",categoryList);
+
+        const courseCategoryContainer=$("#course-category-container");
+        courseCategoryContainer.empty();
+        newCategoryList.forEach((category)=>{
+          courseCategoryContainer.append(`
+            <div class="col-12 col-md-6 col-lg-4" style="cursor: pointer;" onclick="window.open('course-details.html?categoryId=${category.id}&categoryName=${encodeURIComponent(category.categoryName)}', '_blank')">
+              <div class="service-item d-flex flex-column justify-content-between">
+                <div class="">
+                  <h4>${category.categoryName}</h4>
+                  
+                  ${category.id === 10024 ? 
+                    `<p class="text-center"> Undergraduate Courses in the UK </p>` : ``
+                  }
+                  ${category.id === 10025 ? 
+                    `<p class="text-center"> Postgraduate & Research Degrees in the UK (Master’s, MBA & PhD Admission Support)</p>` : ``
+                  }
+                  ${category.id === 10026 ? 
+                    `<p class="text-center"> Access to Higher Education Courses UK (Foundation Pathways)</p>` : ``
+                  }
+
+                  ${category.id === 10024 ? 
+                    `<img src="assets/images/Undergraduate-Courses.jpg" height="200" width="310" alt="Undergraduate" class="d-block mx-auto" style="margin-top:45px" />` : ``
+                  }
+                  ${category.id === 10025 ? 
+                    `<img src="assets/images/Postgraduate-Research.png" height="200" width="310" alt="Postgraduate & Research" class="d-block mx-auto" />` : ``
+                  }
+                  ${category.id === 10026 ? 
+                    `<img src="assets/images/access-to-higher-education.jpg" height="200" width="310" alt="Access to Higher Education" class="d-block mx-auto" />` : ``
+                  }
+
+                  ${category.id === 10024 ? 
+                    `<p style="text-align: justify;" class="mt-3">
+                      Explore top undergraduate courses in the UK,
+                      including management, engineering, computing,
+                      and healthcare degrees. Get personalized UK
+                      university admission support to find the right
+                      course and secure your place at leading
+                      universities.
+                    </p>` 
+                    : ``
+                  }
+                  ${category.id === 10025 ? 
+                    `<p style="text-align: justify;" class="mt-3">
+                      Advance your career with UK postgraduate and
+                      research degrees, including Master’s, MBA, and
+                      PhD programs. Our expert advisors help you
+                      explore options, meet entry requirements, and
+                      complete your UK university admission process
+                      seamlessly.
+                    </p>` 
+                    : ``
+                  }
+                  ${category.id === 10026 ? 
+                    `<p style="text-align: justify;" class="mt-3">
+                      Start your journey with Access to Higher
+                      Education courses, including foundation years
+                      and pre-master’s pathways. Designed for
+                      students without traditional qualifications, our UK
+                      university admission support helps you build
+                      skills and progress into degree programs.
+                    </p>` 
+                    : ``
+                  }
+                </div>
+
+                <div class="d-flex">
+                    <button onclick="window.open('course-details.html?categoryId=${category.id}&categoryName=${encodeURIComponent(category.categoryName)}', '_blank')" class="main-button w-100">Discover More</button>
+                </div>
+              </div>
+            </div>
+          `)
+        })
+    }
+    catch(error){
+        console.error("Error fetching category details:",error);
+    }
+    finally{
+        finishLoader();
+    }
+}
+//============== Course Page API Requests End ====================
+
+//============== Course Details Page API Requests Start ====================
+const getServiceListForCourseDetails=async()=>{
+  let progress = 0;
+  let progressInterval;
+
+  function updateLoader(percent) {
+    const circle = document.querySelector("#loader .circle");
+    const text = document.querySelector("#loader .percentage-text");
+    const radius = 15.9155;
+    const circumference = 2 * Math.PI * radius;
+    const offset = circumference - (percent / 100) * circumference;
+
+    circle.style.strokeDasharray = `${circumference}`;
+    circle.style.strokeDashoffset = `${offset}`;
+    text.textContent = `${percent}%`;
+  }
+
+  function startSmoothLoader() {
+    progress = 0;
+    updateLoader(progress);
+    progressInterval = setInterval(() => {
+      if (progress < 99) {
+        progress++;
+        updateLoader(progress);
+      }
+    }, 50);
+  }
+
+  function finishLoader() {
+    clearInterval(progressInterval);
+    updateLoader(100);
+    setTimeout(() => {
+      $("#loader").fadeOut(400);
+    }, 1000);
+  }
+
+  $("#loader").show();
+  startSmoothLoader();
+  try{
+    // Course Details Information from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryId = urlParams.get('categoryId');
+    const categoryName = urlParams.get('categoryName');
+
+    // Set Course Details Page Header Image and Heading based on Category ID
+    if(parseInt(categoryId) === 10024){
+      $('.tag9 .photo img').attr('src', '/assets/images/Undergraduate-Courses.jpg');
+      $('.section-heading .course-detail-heading').html('Undergraduate Courses in the UK');
+    }
+
+    if(parseInt(categoryId) === 10025){
+      $('.tag9 .photo img').attr('src', '/assets/images/Postgraduate-Research.png');
+      $('.section-heading .course-detail-heading').html('Postgraduate & Research');
+    }
+
+    if(parseInt(categoryId) === 10026){
+      $('.tag9 .photo img').attr('src', '/assets/images/access-to-higher-education.jpg');
+      $('.section-heading .course-detail-heading').html('Access to Higher Education');
+    }
+    
+    // Fetch Service List and filter based on Category Name
+    const response=await fetch(`${coolInvoiceApiUrl}/api/Service/GetAllServiceByCompanyId/${companyId}`);
+    const serviceList=await response.json();
+    //console.log("Service for Course Details Page:",serviceList);
+    const newServiceList=serviceList.filter(service=>service.categoryName.toLowerCase() === decodeURIComponent(categoryName).toLowerCase());
+    //console.log("Filtered Service for Course Details Page:",newServiceList);
+    const courseDetailContainer=$("#course-detail-container");
+    courseDetailContainer.empty();
+
+    newServiceList.forEach((service)=>{
+      courseDetailContainer.append(`
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="service-item d-flex flex-column justify-content-between">
+              <div>
+                  <h4>${service.serviceName}</h4>
+                  <p style="text-align: justify;" class="mt-3">${service.description}</p>
+              </div>
+
+              <div>
+                <div class="col-12 mb-3">
+                  <i class="fa-solid fa-clock fs-4"></i> <span class="fs-4">Duration: </span>
+                  <p>${service.duration}</p>
+                </div>
+                <div class="col-12">
+                  <i class="fa-solid fa-sterling-sign fs-4"></i> <span class="fs-4">Tuition Fee: </span>
+                  <p>Home : ${service.sellingPrice}; Overseas: ${service.sellingPrice} per year</p>
+                </div>
+              </div>
+
+              <div class="d-flex">
+                  <button onclick="window.open('contact.html', '_blank')" class="main-button w-100">Apply Now</button>
+              </div>
+          </div>
+        </div>
+      `)
+    })
+  }
+  catch(error){
+    console.error("Error fetching service details:",error);
+  }
+  finally{
+    finishLoader();
+  }
+}
+//============== Course Details Page API Requests End ====================

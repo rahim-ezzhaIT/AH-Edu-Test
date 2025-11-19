@@ -63,7 +63,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="explore.html">Courses</a>
+                            <a class="nav-link active" href="courses.html">Courses</a>
                         </li>
 
                         <li class="nav-item">
@@ -143,21 +143,23 @@
                             <!-- <h2>Guidance for Every Student</h2> -->
                              <h2>Our Courses</h2>
                             <div>
-                                <h4 class="text-center Comprehensive-header">Explore Top Management Courses UK
-                                    <br>SFE Funded, Self-Funded & Free Study Options
-                                </h4>
+                                <h4 class="text-center Comprehensive-header">Explore Top UK Courses – Undergraduate, <br>Postgraduate & Access Pathways</h4>
                             </div>
 
-                            <div class="text-center description mt-3">
-                                <p>
-                                    Discover leading management courses in the UK — from SFE-funded and self-funded degrees
-                                    to free short courses. <br>Study business, data science, IT, Health and social care & more.
+                            <!-- <div class="text-center description mt-3">
+                                <p style="text-align: justify;">
+                                    We help students at every stage of their academic journey — from entry-level pathways to advanced postgraduate &
+                                    research study. Each route comes with expert guidance, flexible learning options, and clear support for Student
+                                    Finance England (SFE) funding wherever eligibility applies. At AH EDU Global, we help students access a wide range
+                                    of high-quality programmes across leading UK universities. Whether you’re starting your academic journey,
+                                    advancing your qualifications, or preparing for university entry, our UK university admission support ensures you
+                                    find the right course to match your goals.
                                 </p>
-                            </div>
+                            </div> -->
 
-                            <div class="mt-3">
+                            <div class="mt-4">
                                 <div style="text-align: justify;">
-                                    <span class="description">
+                                    <!-- <span class="description">
                                         Whether you’re starting your academic journey or advancing your career, our management courses UK and other
                                         popular programmes are designed to help you gain real-world skills and globally recognised qualifications. We
                                         partner with top UK universities to offer a diverse range of options — from SFE-funded courses and self-funded
@@ -169,22 +171,50 @@
                                         secure your place at a leading institution — whether you study on-campus or online.
                                         Start your journey today and discover how AH EDU Global can help you unlock your full potential through flexible
                                         and affordable UK courses.
+                                    </span> -->
+                                    <span class="description">
+                                        We help students at every stage of their academic journey — from entry-level pathways to advanced postgraduate &
+                                        research study. Each route comes with expert guidance, flexible learning options, and clear support for Student
+                                        Finance England (SFE) funding wherever eligibility applies. At AH EDU Global, we help students access a wide range
+                                        of high-quality programmes across leading UK universities. Whether you’re starting your academic journey,
+                                        advancing your qualifications, or preparing for university entry, our UK university admission support ensures you
+                                        find the right course to match your goals.
                                     </span>
                                 </div>
+                            </div>
+
+                            <div class="mt-4">
+                                <h4 class="text-center Comprehensive-header">Please Select Your Desired Level of Study</h4>
                             </div>
                         </div>
                     </div> 
                 </div> 
-                <div class="row g-4">
-                    <div class="col-12 col-md-6 col-lg-4">
+                <div class="row g-4" id="course-category-container">
+                    <!-- Loading Spinner Start -->
+                    <div id="loader" style="display: none; text-align: center; padding: 30px">
+                        <div class="progress-circle">
+                            <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path
+                                class="circle-bg"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path
+                                class="circle"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <text x="18" y="20.35" class="percentage-text">0%</text>
+                            </svg>
+                        </div>
+                        <p style="margin-top: 15px; font-size: 18px; font-weight: 500; color: #333;">Courses are loading...</p>
+                    </div>
+                    <!-- Loading Spinner End -->
+                    <!-- <div class="col-12 col-md-6 col-lg-4">
                         <div class="service-item d-flex flex-column justify-content-between">
                             <div class="">
                                 <h4>SFE-Funded Courses</h4>
                                 <img src="/assets/images/SFE(1).jpeg"height="200" width="350" alt="SFE-Funded Courses" class="d-block mx-auto" />
-                                <!-- <div class="icon">
-                                    <i class="bi bi-person-check"></i>
-                                </div> -->
-                                <!-- <h4>SFE-Funded Courses</h4> -->
                                 <p style="text-align: justify;" class="mt-3">
                                     Gain a world-class education through SFE-funded undergraduate and postgraduate courses available to eligible UK and EU students.
                                     These include popular study areas such as business and management, computing and IT, nursing, and engineering — all backed by Student 
@@ -194,12 +224,6 @@
                                     ensuring you access every funding opportunity available. Study confidently knowing your tuition fees and living costs are supported by 
                                     government funding.
                                 </p>
-                                <!-- <ul class="mb-4 d-flex flex-column gap-2">
-                                    <li class="d-flex gap-2"><i class="bi bi-check-circle"></i> <span>Personalised eligibility assessment</span> </li>
-                                    <li class="d-flex gap-2"><i class="bi bi-check-circle"></i> <span>Course & university matching</span></li>
-                                    <li class="d-flex gap-2"><i class="bi bi-check-circle"></i> <span>Student finance guidance</span></li>
-                                    <li class="d-flex gap-2"><i class="bi bi-check-circle"></i> <span>Application support via UCAS</span></li>
-                                </ul> -->
                             </div>
 
                             <div class="d-flex">
@@ -212,10 +236,6 @@
                             <div class="">
                                 <h4>Self-Funded Courses</h4>
                                 <img src="/assets/images/Self-funded courses.jpg"height="200" width="350" alt="Self-Funded Courses" class="d-block mx-auto" />
-                                <!-- <div class="icon">
-                                    <i class="bi bi-book"></i>
-                                </div> -->
-                                <!-- <h4>Self-Funded Courses</h4> -->
                                 <p style="text-align: justify;" class="mt-3">
                                     Prefer to study at your own pace or explore postgraduate options not covered by SFE? Our self-funded courses are ideal for international students 
                                     and working professionals.
@@ -224,13 +244,6 @@
                                             These courses are designed to deliver value through real-world learning, modern curriculum, and global recognition — helping you advance 
                                             your career with confidence.
                                 </p>
-
-                                <!-- <ul class="mb-4 d-flex flex-column gap-2">
-                                    <li class="d-flex gap-2"><i class="bi bi-check-circle"></i> <span>Post-Brexit eligibility review</span></li>
-                                    <li class="d-flex gap-2"><i class="bi bi-check-circle"></i> <span>Visa and immigration support</span></li>
-                                    <li class="d-flex gap-2"><i class="bi bi-check-circle"></i> <span>Scholarship & funding opportunities</span></li>
-                                    <li class="d-flex gap-2"><i class="bi bi-check-circle"></i> <span>Seamless UCAS application process</span></li>
-                                </ul> -->
                             </div>
 
                             <div class="d-flex">
@@ -243,10 +256,6 @@
                             <div class="">
                                 <h4>Free Courses</h4>
                                 <img src="/assets/images/Free-courses.jpg"height="200" width="350" alt="Free Courses" class="d-block mx-auto" />
-                                <!-- <div class="icon">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div> -->
-                                <!-- <h4>Free Courses</h4> -->
                                 <p style="text-align: justify;" class="mt-3">
                                     Explore our range of free online courses designed to build essential skills and prepare you for further study or employment.
                                     From business fundamentals and communication skills to digital literacy and career readiness, these courses provide a practical entry point 
@@ -255,20 +264,13 @@
                                     <br><br>We partner with trusted UK institutions to ensure that every course adds value — whether you’re preparing for university, 
                                     career change, or upskilling for personal growth.
                                 </p>
-
-                                <!-- <ul class="mb-4 d-flex flex-column gap-2">
-                                    <li class="d-flex gap-2"><i class="bi bi-check-circle"></i> <span>Access courses & foundation programmes</span></li>
-                                    <li class="d-flex gap-2"><i class="bi bi-check-circle"></i> <span>Recognition of prior learning</span></li>
-                                    <li class="d-flex gap-2"><i class="bi bi-check-circle"></i> <span>Portfolio-based application support</span></li>
-                                    <li class="d-flex gap-2"><i class="bi bi-check-circle"></i> <span>Personalised university shortlisting</span></li>
-                                </ul> -->
                             </div>
 
                             <div class="d-flex">
                                 <button onclick="window.open('contact.html', '_blank')" class="main-button w-100">Free</button>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="row">
                     <div class="col-md-12">
@@ -281,7 +283,7 @@
             </div>
         </div>
     </section>
-    <!-- Services Start -->
+    <!-- Services End -->
 
     <!-- Footer Start -->
     <footer class="">
@@ -371,9 +373,11 @@
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- <script src="assets/js/isotope.min.js"></script> -->
+     <script src="assets/js/isotope.min.js"></script>
     <script src="assets/js/owl-carousel.js"></script>
 
     <!-- <script src="assets/js/tabs.js"></script> -->
+    <script src="assets/js/tabs.js"></script>
     <script src="assets/js/popup.js"></script>
     <script src="assets/js/custom.js"></script>
 
@@ -381,8 +385,12 @@
     <script src="js/apiRequest.js"></script>
     <script>
         $(document).ready(function(){
+            // Company Details API Call
             getCompanyDetail();
+            // Company Footer API Call
             getCompanyFooter();
+            // Course Category API Call
+            getCourseCategoryList();
         })
     </script>
 </body>

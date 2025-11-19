@@ -2416,3 +2416,30 @@ section.contact-us-page .right-info ul li span {
         background: #fff !important;
     }
 /* University image slide carousel end */
+
+/* Course Details Page Start */
+.tag9 {
+  padding: 0;
+  margin: 0;
+  font-size: 40px;
+  position: relative;
+  overflow: hidden; /* Prevent overflow artifacts */
+}
+
+.tag9 .photo {
+  width: 100%;
+  height: 550px; /* Increased height */
+  margin: 0; /* Remove any vertical spacing */
+  padding: 0;
+  position: relative;
+}
+
+.tag9 .photo-img {
+  display: block; /* Removes default inline spacing */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+/* Course Details Page End */
