@@ -288,7 +288,7 @@ const getServiceList=async()=>{
       let resizeTimer = null;
       window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => renderServices(serviceList), 120);
+        resizeTimer = setTimeout(() => renderServices(newServiceList), 120);
       });
   }
   catch(error){
