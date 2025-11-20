@@ -2415,6 +2415,70 @@ section.contact-us-page .right-info ul li span {
     .owl-nav button:hover {
         background: #fff !important;
     }
+
+  @media (max-width: 350px) {
+      .carousel-overlay {
+          width: 45%;
+          font-size: 0.9rem;
+          top: 50%;
+      }
+  }
+
+  @media (min-width: 351px) and (max-width: 375px) {
+      .carousel-overlay {
+          width: 40%;
+          font-size: 0.9rem;
+          top: 65%;
+      }
+  }
+
+  @media (min-width: 376px) and (max-width: 400px) {
+      .carousel-overlay {
+          width: 40%;
+          font-size: 0.9rem;
+          top: 55%;
+      }
+  }
+
+  @media (min-width: 401px) and (max-width: 480px) {
+      .carousel-overlay {
+          width: 40%;
+          font-size: 0.9rem;
+      }
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
+      .carousel-overlay {
+          width: 70%;
+          font-size: 1rem;
+          top: 45%;
+      }
+  }
+
+  @media (min-width: 769px) and (max-width: 960px) {
+      .carousel-overlay {
+          width: 70%;
+          font-size: 1.1rem;
+          top: 40%;
+      }
+  }
+
+  @media (min-width: 961px) and (max-width: 1024px) {
+      .carousel-overlay {
+          width: 72%;
+          font-size: 1.1rem;
+          top: 33%;
+      }
+  }
+
+  @media (min-width: 1025px) {
+      .carousel-overlay {
+          width: 80%;
+          font-size: 1.2rem;
+          top: 50%;
+      }
+  }
+
 /* University image slide carousel end */
 
 /* Course Details Page Start */
