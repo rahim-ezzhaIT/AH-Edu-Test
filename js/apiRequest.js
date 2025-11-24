@@ -874,7 +874,7 @@ const getServiceListForCourseDetails=async()=>{
           <div class="service-item d-flex flex-column justify-content-between">
               <div>
                   <h4>${service.serviceName}</h4>
-                  <p style="text-align: justify;" class="mt-3">${service.description}</p>
+                  <p style="text-align: justify; margin-top: 3.5rem">${service.description}</p>
               </div>
 
               <div>

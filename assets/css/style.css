@@ -2720,9 +2720,9 @@ section.contact-us-page .right-info ul li span {
         font-size: 20px !important;
     }
 
-    .section-heading h2 {
+    /* .section-heading h2 {
         font-size: 50px;
-    }
+    } */
 
     .Comprehensive-header {
       font-size: 18px;
@@ -2734,8 +2734,8 @@ section.contact-us-page .right-info ul li span {
         width: 40px !important;
     }
 
-    .tag2 .photo, .tag3 .photo, .tag6 .photo {
-        height: 100px;
+    .tag2 .photo, .tag3 .photo {
+        height: 190px;
     }
 
     .tag2 .photo-img, .tag3 .photo-img {
@@ -2745,6 +2745,10 @@ section.contact-us-page .right-info ul li span {
     .tag6 .photo-img  {
         height: 100px;
         margin-top: 65px;
+    }
+
+    .tag6 .photo{
+      height: 100px;
     }
 
     .whoWeServe-header {
@@ -2762,7 +2766,7 @@ section.contact-us-page .right-info ul li span {
     }
     
     .section-heading h2 {
-      font-size: 30px;
+      font-size: 25px;
     }
 
     .owl-nav .owl-prev{
