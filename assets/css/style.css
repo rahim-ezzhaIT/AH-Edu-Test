@@ -144,49 +144,22 @@ section {
   text-transform: capitalize;
   color: #2a2a2a;
   line-height: 32px;
-  letter-spacing: -0.5px;
 }
 
 .section-heading {
   font-size: 22px;
 }
 
-.description {
-  font-size: 22px;
-  color: #7a7a7a;
-}
-
 .whoWeServe-header {
   font-size: 32px;
   color: #000000;
   line-height: 40px;
-  letter-spacing: -0.5px;
 }
 
 .Comprehensive-header {
   font-size: 32px;
   color: #000000;
   line-height: 40px;
-  letter-spacing: -0.5px;
-}
-
-@media (max-width : 480px) {
-    .section-heading .description {
-    font-size: 5vw;
-  }
-
-  button.learn-more-button {
-    margin-bottom: 1rem;
-  }
-}
-
-@media (min-width: 576px) {
-  .section-heading h2 {
-    font-size: 34px;
-    line-height: 48px;
-    text-transform: uppercase;
-    letter-spacing: auto;
-  }
 }
 
 .section-heading h2 em {
@@ -236,7 +209,7 @@ section {
   padding: 0px;
   -webkit-transition: all .3s;
   transition: all .3s;
-  z-index: 9;
+  z-index: 99;
 }
 
 .navbar-nav {
@@ -375,13 +348,15 @@ button:focus:not(:focus-visible) {
           box-shadow: none;
 }
 
-#video-container  {
+.secondary-banner-section {
   position: relative;
   width: 100%;
-  height: 90vh;
-  overflow: hidden;
-  z-index: 1;
 }
+
+.secondary-banner-section video{
+  width: 100%;
+}
+
 
 /* #video-container video,
 .video-overlay {
@@ -485,13 +460,27 @@ button:focus:not(:focus-visible) {
   color: #f8ac20;
 }  */
 
+.main-banner{
+  position: relative;
+  width: 100%;
+}
+
+.main-banner video{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
 .fade-bottom {
     position: absolute;
     left: 0;
     width: 100%;
     bottom: 0;
-    height: 10%;
+    height: 20%;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0, #ffffff);
+    z-index: 9;
 }
 
 .search-form {
@@ -551,6 +540,14 @@ button:focus:not(:focus-visible) {
     padding: 30px 20px;
 }
 
+#who-we-serve-container .service-item h4, #choose-us-detail-container .service-item h4{
+  height: 36px !important;
+}
+
+#who-we-serve-container .service-item p, #choose-us-detail-container .service-item p{
+  margin-bottom: 0;
+}
+
 .service-item .icon {
     margin-bottom: 20px;
 }
@@ -571,28 +568,22 @@ button:focus:not(:focus-visible) {
 
 .service-item h4 {
     position: relative;
-    font-size: 1.3rem;
-    /* font-weight: 600; */
-    color: #232323;
-    /* margin-bottom: 15px; */
-    position: relative;
-    line-height: 24px;
-    /* font-weight: bold; */
-    /* display: table; */
+    font-size: 1.2rem;
+    line-height: 28px;
     padding-right: .8rem;
-    border-radius: 5px;
-    z-index: 0;
-    /* text-transform: uppercase; */
-    /* font-size: 20px; */
-    break-inside: avoid-column;
     text-align: center;
     font-weight: bold;
-    margin-bottom: 1.2rem;
+    margin-bottom: 10px;
+    height: 56px;
 }
 
 .service-item ul{
   font-size: 15px;
     color: #7a7a7a;
+}
+
+.service-item img{
+  width: 100% !important;
 }
 
 /* testimonial */
@@ -624,6 +615,7 @@ button:focus:not(:focus-visible) {
 .testimonial-box {
     display: block;
     position: relative;
+    width: 100%;
     padding: 30px 20px;
     background: #fff;
     border: 1px solid rgba(0,0,0,.03);
@@ -708,6 +700,11 @@ section.contact-us .left-form {
   padding-right: 15px;
 }
 
+.contact-us-form .section-heading h2{
+  font-size: 28px;
+    line-height: 24px;
+}
+
 @media (min-width: 992px) {
   section.contact-us .left-form {
     padding-right: 0px;
@@ -747,12 +744,9 @@ section.contact-us .right-map {
 
 section.contact-us form {
   height: 100%;
-  padding: 30px;
-  border-top-right-radius: 7.5px;
-  border-bottom-right-radius: 7.5px;
+  padding: 40px;
+  border-radius: 7.5px;
   background-color: #ffffff;
-  border-top-left-radius: 7.5px;
-  border-bottom-left-radius: 7.5px;
   margin-bottom: 0px;
 }
 
@@ -1038,11 +1032,6 @@ footer .sub-footer a.scroll-to-top:hover {
   text-align: center;
 } */
 
-@media (min-width: 768px) {
-  .page-banner {
-    padding: 65px 0px 0px 0px;
-  }
-}
 
 .page-banner h2 {
   color: #ffffff;
@@ -1104,7 +1093,7 @@ footer .sub-footer a.scroll-to-top:hover {
     position: absolute;
     left: -8px;
     top: 0px;
-    height: 24px;
+    height: 27px;
     width: 100%;
     border-radius: 5px;
     background: #f2ce73;
@@ -1116,11 +1105,11 @@ section.interior-design .left-image {
   margin-right: 0;
 }
 
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
   section.interior-design .left-image {
     margin-right: 50px;
   }
-}
+} */
 
 section.interior-design .left-image img {
   border-radius: 7.5px;
@@ -1216,8 +1205,8 @@ section.interior-design .right-content .accordion-body {
 }
 
 .what-they-say .testimonial-item {
-  padding: 50px;
-  margin: 20px;
+  padding: 30px !important;
+  margin: 10px !important;
   z-index: 1;
   -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
@@ -1225,10 +1214,13 @@ section.interior-design .right-content .accordion-body {
   border-radius: 7.5px;
   border-bottom-right-radius: 0px;
   position: relative;
+  flex-direction: column;
+  text-align: left !important;
 }
 
 .what-they-say .testimonial-item img {
-  max-width: 60px;
+  height: 60px !important;
+  width: 60px !important;
   border-radius: 50%;
   margin-right: 20px;
   float: left !important;
@@ -1255,7 +1247,8 @@ section.interior-design .right-content .accordion-body {
 }
 
 .what-they-say .testimonial-item p {
-  margin-top: 25px;
+  margin-top: 15px;
+  font-weight: 400;
   margin-bottom: 0px;
 }
 
@@ -1703,12 +1696,6 @@ section.contact-us-page .contact-page-form form {
   margin-right: 0px;
 }
 
-@media (min-width: 992px) {
-  section.contact-us-page .contact-page-form form {
-    margin-right: 45px;
-  }
-}
-
 section.contact-us-page .contact-page-form form input {
   width: 100%;
   height: 44px;
@@ -1790,7 +1777,7 @@ section.contact-us-page .right-info ul li span {
 
 /* Who We Serve Photo. Start Here */
 .whoWeServe-section{
-  margin-top: -16rem;
+  /* margin-top: -16rem; */
 }
 .tag2 {
   min-height: 30px;
@@ -2042,12 +2029,11 @@ section.contact-us-page .right-info ul li span {
 }
 
 .contact-section-heading h2{
-  font-size: 28px;
+    font-size: 32px;
     line-height: 32px;
     font-weight: 700;
     text-transform: uppercase;
     color: #2a2a2a;
-    letter-spacing: -0.5px;
     margin-bottom: 30px;
 }
 
@@ -2065,7 +2051,7 @@ section.contact-us-page .right-info ul li span {
 
 .contact-us-body{
   position: relative;
-  top: -100px;
+  top: -70px;
   z-index: 9;
 }
 
@@ -2121,7 +2107,7 @@ section.contact-us-page .right-info ul li span {
 
 .tag8 .photo {
   width: 100%;
-  height: 400px; /* Increased height */
+  height: 500px; /* Increased height */
   margin: 0; /* Remove any vertical spacing */
   padding: 0;
   position: relative;
@@ -2136,6 +2122,10 @@ section.contact-us-page .right-info ul li span {
   padding: 0;
 }
 
+.description-list{
+  list-style: disc;
+}
+
 /* Text overlay */
 .admission-text {
   position: absolute;
@@ -2144,7 +2134,7 @@ section.contact-us-page .right-info ul li span {
   transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
-  z-index: 2;
+  z-index: 9;
   padding: 20px 40px;
   border-radius: 10px;
 }
@@ -2171,11 +2161,18 @@ section.contact-us-page .right-info ul li span {
   font-size: 16px;
 }
 
+.description {
+  font-size: 18px;
+  color: #7a7a7a;
+  margin-top: 40px;
+}
+
 .description-list{
   padding-left: 20px;
 }
 
 .description-list li{
+  display: list-item;
   font-size: 16px;
   margin-bottom: 10px;
   line-height: 26px;
@@ -2365,66 +2362,71 @@ section.contact-us-page .right-info ul li span {
 
 /* University image slide carousel start */
 .carousel-overlay {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 80%;
-        z-index: 2;
-    }
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    z-index: 2;
+}
 
-    .owl-carousel .item {
-        padding: 10px;
-        border-radius: 10px;
-        text-align: center;
-        color: #fff;
-        font-size: 24px;
-        font-weight: 500;
-        margin: 0 !important;
-    }
+.owl-carousel .item {
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
 
-    .owl-carousel .item img {
+.carousel-overlay .owl-carousel .item img {
     height: 150px !important;
     width: 150px !important;
 }
 
-    /* Navigation Buttons */
-    .owl-nav button {
-        position: absolute;
+/* Navigation Buttons */
+.owl-nav button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.6) !important;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 30px !important;
+    line-height: 30px !important;
+    color: #000 !important;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.owl-nav .owl-prev {
+    left: -60px;
+}
+
+.owl-nav .owl-next {
+    right: -60px;
+}
+
+.owl-nav button:hover {
+    background: #fff !important;
+}
+
+@media (max-width: 350px) {
+    .carousel-overlay {
+        width: 45%;
+        font-size: 0.9rem;
         top: 50%;
-        transform: translateY(-50%);
-        background: rgba(255, 255, 255, 0.6) !important;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        font-size: 30px !important;
-        line-height: 30px !important;
-        color: #000 !important;
-        border: none;
-        outline: none;
     }
+}
 
-    .owl-nav .owl-prev {
-        left: -60px;
-    }
-
-    .owl-nav .owl-next {
-        right: -60px;
-    }
-
-    .owl-nav button:hover {
-        background: #fff !important;
-    }
-
-  @media (max-width: 350px) {
-      .carousel-overlay {
-          width: 45%;
-          font-size: 0.9rem;
-          top: 50%;
-      }
-  }
-
-  @media (min-width: 351px) and (max-width: 375px) {
+  /* @media (min-width: 351px) and (max-width: 375px) {
       .carousel-overlay {
           width: 40%;
           font-size: 0.9rem;
@@ -2477,7 +2479,7 @@ section.contact-us-page .right-info ul li span {
           font-size: 1.2rem;
           top: 50%;
       }
-  }
+  } */
 
 /* University image slide carousel end */
 
@@ -2507,3 +2509,364 @@ section.contact-us-page .right-info ul li span {
   padding: 0;
 }
 /* Course Details Page End */
+
+@media (max-width: 1366px) {
+    .carousel-overlay .owl-carousel .item img {
+      height: 100px !important;
+      width: 100px !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .admission-info-section{
+        padding: 0;
+    }
+
+    .admission-text {
+        position: absolute;
+        top: 40%;
+        left: 0;
+        transform: none;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        padding: 20px 40px;
+        border-radius: 10px;
+    }
+
+    .admission-text h2, .student-support-header {
+        font-size: 32px;
+    }
+
+    .admission-box {
+        height: 180px;
+    }
+
+    .admission-img img {
+        width: 134px;
+    }
+
+    .admission-tittle h1 {
+        font-size: 30px;
+    }
+
+    .admission-tittle {
+        left: 25px;
+    }
+
+    .admission-ribbon.left {
+        height: 118%;
+        width: auto;
+        right: calc(-1.15 * var(--f));
+    }
+
+    .admission-info-heading h1 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .description-list {
+        padding-left: 0px;
+    }
+
+    .admission-ribbon.left img{
+        width: 110px;
+    }
+
+    .right-body-info {
+        padding: 20px;
+    }
+
+    .flag-banner {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px 30px 0 0px;
+    }
+
+    .flag-banner:after {
+        border-left: 148px solid transparent;
+        border-right: 148px solid transparent;
+    }
+
+    .right-body-info h1 {
+        font-size: 24px;
+    }
+
+    .right-body-info p {
+        text-align: left;
+    }
+}
+
+@media (max-width: 960px) {
+  .carousel-overlay .owl-carousel .item img {
+      height: 80px !important;
+      width: 80px !important;
+    }
+
+    .owl-nav .owl-next {
+      right: -40px;
+    }
+
+    .owl-nav .owl-prev {
+      left: -35px;
+    }
+
+    .owl-nav button{
+          width: 40px;
+      height: 40px;
+      font-size: 26px;
+    }
+
+    .tag2 .photo, .tag3 .photo, .tag6 .photo, .tag4 .photo, .tag5 .photo {
+        height: 190px;
+    }
+
+    .tag2 .photo-img, .tag3 .photo-img, .tag4 .photo-img, .tag5 .photo-img {
+        height: 200px;
+    }
+
+    .tag6 .photo-img {
+        height: 240px;
+    }
+
+    .section-heading h2 {
+        font-size: 50px;
+    }
+
+    .Comprehensive-header {
+      font-size: 26px;
+    }
+
+    #map .wrap:after {
+      content: 'Visit Us';
+      font-size: 50px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--font-color);
+      position: absolute;
+      right: 3%;
+      top: 0px;
+      z-index: 2;
+    }
+
+    .admission-info-section{
+        padding: 0;
+    }
+
+    .admission-text {
+        position: absolute;
+        top: 40%;
+        left: 0;
+        transform: none;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        padding: 20px 40px;
+        border-radius: 10px;
+    }
+
+    .admission-text h2, .student-support-header {
+        font-size: 32px;
+        margin-top: 100px;
+    }
+
+    .admission-box {
+        height: 180px;
+    }
+
+    .admission-img img {
+        width: 115px;
+    }
+
+    .admission-tittle h1 {
+        font-size: 20px;
+    }
+
+    .admission-tittle {
+        left: 25px;
+    }
+
+    .admission-ribbon.left {
+        height: 118%;
+        width: auto;
+        right: calc(-1.15 * var(--f));
+    }
+
+    .admission-info-heading h1 {
+        font-size: 20px;
+        line-height: 34px;
+    }
+
+    .description-list {
+        padding-left: 0px;
+    }
+
+    .flag-banner:after {
+        width: 100%;
+        border-bottom: 30px solid #fff;
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+    }
+}
+
+@media (max-width: 448px) {
+    .owl-nav .owl-prev {
+      left: -35px;
+    }
+
+    .owl-nav button {
+        width: 24px;
+        height: 24px;
+        font-size: 20px !important;
+    }
+
+    .section-heading h2 {
+        font-size: 50px;
+    }
+
+    .Comprehensive-header {
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    .carousel-overlay .owl-carousel .item img {
+        height: 40px !important;
+        width: 40px !important;
+    }
+
+    .tag2 .photo, .tag3 .photo, .tag6 .photo {
+        height: 190px;
+    }
+
+    .tag2 .photo-img, .tag3 .photo-img {
+        height: 200px;
+    }
+
+    .tag6 .photo-img  {
+        height: 240px;
+    }
+
+    .whoWeServe-header {
+        font-size: 18px;
+        line-height: 28px;
+        margin-top: 20px !important;
+    }
+
+    .section-heading .description {
+      font-size: 14px;
+    }
+
+    button.learn-more-button {
+      margin-bottom: 1rem;
+    }
+    
+    .section-heading h2 {
+      font-size: 30px;
+    }
+
+    .owl-nav .owl-prev{
+      left: 0;
+    }
+
+    .owl-nav .owl-next {
+      right: 0px;
+    }
+
+    .testimonials-wrap .heading-section h2{
+      font-size: 24px;
+    }
+
+    .testimonial-box {
+      width: 75%;
+    }
+
+    #map {
+      background: transparent;
+    }
+
+    .quote {
+        top: -14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+
+    .contact-section-heading h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    section.contact-us form {
+        padding: 30px;
+    }
+
+    .tag5 .photo {
+        height: 90px;
+    }
+
+    .tag5 .photo-img {
+        height: 100px;
+    }
+
+    .contact-us-body {
+        position: relative;
+        padding: 0px;
+        top: -65px;
+        z-index: 9;
+    }
+
+    #map .wrap:after {
+      font-size: 40px;
+    }
+
+    #map .wrap:before {
+        right: -10%;
+        top: -20px;
+        width: 55%;
+        height: 80px;
+    }
+
+    button.main-button {
+      font-size: 12px;
+    }
+
+    .flag-banner:after {
+        border-left: 60px solid transparent;
+        border-right: 60px solid transparent;
+    }
+
+    .admission-ribbon.left img {
+        width: 80px;
+    }
+
+    .admission-ribbon.left {
+      margin-top: 32px;
+        height: 100%;
+        width: auto;
+        right: calc(-1.8 * var(--f));
+    }
+
+    .admission-box{
+      width: 70%;
+      margin-bottom: 50px;
+    }
+
+    .admission-tittle {
+        left: 52px;
+        font-size: 12px;
+    }
+
+    .admission-img{
+      position: absolute;
+      top: 0;
+      left: -23px;
+    }
+
+    .col-6 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+
+}

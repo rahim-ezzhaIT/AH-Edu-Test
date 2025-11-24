@@ -241,12 +241,13 @@ const getServiceList=async()=>{
         serviceContainer.empty();
         const perRow = getColsPerRow();
         const rows = chunkArray(list, perRow);
-
+        let $baseRow = $(`<div class="row"></div>`);
+        
         rows.forEach((chunk, rowIndex) => {
           // If this row is incomplete, center its items. Otherwise keep default layout.
           const incomplete = chunk.length < perRow;
-          const rowClass = incomplete ? 'row g-4 justify-content-center' : 'row g-4';
-          const $row = $(`<div class="${rowClass}"></div>`);
+          const rowClass = incomplete ? 'justify-content-center g-4' : 'g-4';
+          const $row = $baseRow.addClass(rowClass);
 
           chunk.forEach(service => {
             // build column markup
