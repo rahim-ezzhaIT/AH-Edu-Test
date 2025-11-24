@@ -2735,7 +2735,7 @@ section.contact-us-page .right-info ul li span {
     }
 
     .tag2 .photo, .tag3 .photo, .tag6 .photo {
-        height: 190px;
+        height: 100px;
     }
 
     .tag2 .photo-img, .tag3 .photo-img {
@@ -2743,7 +2743,8 @@ section.contact-us-page .right-info ul li span {
     }
 
     .tag6 .photo-img  {
-        height: 240px;
+        height: 100px;
+        margin-top: 65px;
     }
 
     .whoWeServe-header {
